@@ -11,34 +11,16 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
 
-.img1 {
-    width: 170px;
-    height: 170px;
-    position: relative;
-    top: 15px;
-    left: 115px;
-    border-radius: 100%;
-    border: 4.5px solid black;
-}
-
-.img2 {
-    width: 170px;
-    height: 170px;
-    position: relative;
-    top: 15px;
-    left: -85px;
-    border-radius: 100%;
-    border: 4.5px solid white;
-}
-
 .right  {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     display: flex;
+    flex-direction: column;
     border: 1px solid green;
     justify-content: center;
     background-color: rgb(0, 0, 0);
@@ -46,133 +28,136 @@ body {
 
 .infoDarkSide {
     height: 100%;
-    width: 150%;
+    width: 100%;
 }
 
+
 .infoDarkSide h1 {
-    margin-top: 50px;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
+    display: none;
 }
 
 .infoDarkSide p {
+    margin-top: 10px;
     color: white;
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: 25px;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .infoDarkSide .quote {
-    margin-top: 80px;
     margin-left: 20px;
 }
 
+
 .left {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
     background-color: rgb(255, 251, 243);
 }
 
 .infoLightSide {
-    width: 120%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
 }
 
 .infoLightSide h1 {
-    text-align: center;
-    margin-top: 50px;
+    display: none;
 }
 
 .infoLightSide p {
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: 25px;
     font-weight: 600;
     padding-right: 30px;
 }
 
-
-
-
-.circlesBlack, .circlesWhite {
-    height: 100%;
+.circlesWhite, .circlesBlack {
+    height: 50%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    flex-direction: row;
     justify-content: center;
 }
 
 .circlesBlack {
-    align-items: start;
+    align-items: end;
 }
 
 
 .circleHalfWhite1, .circleHalfWhite2, .circleHalfBlack3, .circleHalfBlack4 {
-    height: 200px;
-    width: 200px;
+    height: 130px;
+    width: 130px;
 }
-
 
 .circleHalfWhite1 {
     border-top-left-radius: 100%;
-    background-color: white;
-    border-right: 1px solid transparent;
-    border-bottom: 1px solid transparent;  
-    box-shadow: 0 -4px 5px 5px lightgreen; 
+    box-shadow: 0 2px 3px 3px lightgreen;
 }
 
 .circleHalfWhite2 {
-    border-bottom-left-radius: 100%;
-    border-right-color: black;
-    background-color: white;
+    border-top-right-radius: 100%;
     display: flex;
-    flex-direction: column;
     align-items: end;
-    box-shadow: 0 4px 5px 5px lightgreen
+    box-shadow: 0 2px 3px 3px lightgreen;
+}
 
+.whiteSemiCircle {
+    height: 50%;
+    width: 100%;
+    border-radius: 0 0 150px 150px;
 }
 
 .blackSemiCircle {
-    height: 100%;
-    width: 50%;
-    border-radius: 150px 0 0 150px;
-    background-color: black;
+    height: 50%;
+    width: 100%;
+    border-radius: 150px 150px 0 0;
 }
+
 
 .circleHalfBlack3 {
-    border-top-right-radius: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 -4px 5px 5px red
-   
-}
-
-
-.whiteSemiCircle {
-    height: 100%;
-    width: 50%;
-    border-radius: 0 150px 150px 0;
-    background-color: white;
+    height: 130px;
+    width: 130px;
+    border-bottom-left-radius: 100%;
+    box-shadow: 0 -2px 3px 3px red
 }
 
 .circleHalfBlack4 {
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid green;
+    height: 130px;
+    width: 130px;
     border-bottom-right-radius: 100%;
-    box-shadow: 0 4px 5px 5px red
+    box-shadow: 0 -2px 3px 3px red
 }
 
 
+
+.img1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 75px;
+    left: 15px;
+    border-radius: 100%;
+    border: 4.5px solid black;
+}
+
+.img2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 55px;
+    left: 15px;
+    border-radius: 100%;
+    border: 4.5px solid white;
+}
+
 .button {
-    margin: 50px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 150px;
 }
 
 .button:hover {
@@ -181,3 +166,131 @@ body {
     box-shadow: 2px 2px 2px 2px red ;
 }
 
+
+@media (min-width: 600px) {
+  
+    .container {
+        flex-direction: row;
+    }
+
+    .right  {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .infoDarkSide {
+        width: 150%;
+    }
+
+    .infoDarkSide h1 {
+        margin-top: 50px;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .infoDarkSide p {
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
+
+    .infoDarkSide .quote {
+        margin-top: 80px;
+    }
+
+    .left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .infoLightSide {
+        width: 120%;
+        height: 100%;
+    }
+    
+    .infoLightSide p {
+        font-size: 1.5rem;
+        margin-top: 25px;
+    }
+
+    .circlesBlack, .circlesWhite {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .circlesBlack {
+        align-items: start;
+    }
+
+
+    .circleHalfWhite1, .circleHalfWhite2, .circleHalfBlack3, .circleHalfBlack4 {
+        height: 200px;
+        width: 200px;
+    }
+
+
+    .circleHalfWhite1 {
+        border-top-left-radius: 100%;
+        box-shadow: 0 -4px 5px 5px lightgreen; 
+    }
+
+    .circleHalfWhite2 {
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 100%;
+        box-shadow: 0 4px 5px 5px lightgreen;
+        display: flex;
+        justify-content: end;
+    }
+
+    .blackSemiCircle {
+        height: 100%;
+        width: 50%;
+        border-radius: 150px 0 0 150px;
+    }
+
+    .circleHalfBlack3 {
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 0%;
+        box-shadow: 0 -4px 5px 5px red
+    }
+
+
+    .whiteSemiCircle {
+        height: 100%;
+        width: 50%;
+        border-radius: 0 150px 150px 0;
+    }
+
+    .circleHalfBlack4 {
+        border: 1px solid black;
+        box-shadow: 0 4px 5px 5px red
+    }
+
+    .img1 {
+        width: 170px;
+        height: 170px;
+        top: 15px;
+        left: 115px;
+    }
+
+    .img2 {
+        width: 170px;
+        height: 170px;
+        top: 15px;
+        left: -85px;
+    }
+
+    .button {
+        margin: 50px;
+        padding: 15px;
+    }
+
+}
