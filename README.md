@@ -4,5 +4,5 @@ The Theme of this terms Devsoc Training Program Application was "Opposites Attra
 My design involves the Yin and Yang symbol commonly known for the fact that opposing forces of 
 darkness and light are at the same time are complementary and attract each other which perfectly embodies the theme.
 
-My design involves use of flexbox and media queries to improve responsiveness while also adding an interactive
-button through manipulating the DOM with javascript.
+My design involves use of flexbox to improve responsiveness while also adding an interactive
+button through manipulating the DOM with javascript. I've also optimised view on mobile with the use of media queries.
